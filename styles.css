@@ -1,0 +1,225 @@
+/* The Lyrics Party - stylesheet */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+    background-color: #ffffff;
+    font-size: 12px;
+}
+
+/* Website title */
+body > header {
+    background-color: #ffff00;
+    text-align: center;
+}
+
+body > header h1 {
+    margin: 0;
+    padding: 7px 0 5px;
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #555555;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 9px 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+nav a:hover {
+    color: #ffff00;
+}
+
+/* Main song banner */
+main > header {
+    min-height: 112px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+        url("images/talking_heads-speaking_in_tongues.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#artist_info h1 {
+    margin: 0 0 5px;
+    color: #ffff00;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+#artist_info h2,
+#artist_info h3 {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#album_cover img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 4px solid #ffff00;
+}
+
+/* Main content: lyrics on the left and song information on the right */
+article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 16px auto 40px;
+}
+
+#lyrics {
+    width: 62%;
+    padding: 0 10px;
+}
+
+#lyrics section {
+    margin: 0 0 16px;
+}
+
+#lyrics section:nth-child(even) {
+    margin-left: 50px;
+}
+
+#lyrics h2 {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 6px 8px;
+    background-color: #ffff00;
+    color: #555555;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#lyrics p {
+    margin: 0;
+    padding-left: 7px;
+    border-left: 2px solid #ffff00;
+    color: #666666;
+    font-size: 10px;
+    line-height: 1.25;
+}
+
+/* About the song panel */
+#about {
+    width: 38%;
+    min-height: 480px;
+    background-color: #555555;
+    color: #ffffff;
+}
+
+#about h2 {
+    margin: 0;
+    padding: 11px 12px;
+    background-color: #ffff00;
+    color: #555555;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#about p {
+    margin: 12px 12px;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+#about blockquote {
+    margin: 12px 18px 20px 28px;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+#about a {
+    color: #ffff00;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 24px 5%;
+    border-top: 3px solid #ffff00;
+    color: #999999;
+    font-size: 9px;
+    text-align: center;
+}
+
+footer a {
+    color: #555555;
+    background-color: #ffff00;
+    overflow-wrap: anywhere;
+}
+
+/* Make the layout fit smaller screens */
+@media (max-width: 650px) {
+    nav ul {
+        gap: 25px;
+    }
+
+    main > header {
+        padding: 18px 15px;
+    }
+
+    #artist_info h1 {
+        font-size: 14px;
+    }
+
+    article {
+        display: block;
+        width: 92%;
+    }
+
+    #lyrics,
+    #about {
+        width: 100%;
+    }
+
+    #lyrics {
+        padding: 0;
+    }
+
+    #about {
+        min-height: 0;
+        margin-top: 25px;
+        padding-bottom: 10px;
+    }
+
+    #lyrics section:nth-child(even) {
+        margin-left: 25px;
+    }
+}
